@@ -1,6 +1,6 @@
 # CSC-289
 
-# capstone
+# Capstone
 # Hi! My name's Toni Wilson
 
 ## About Me
