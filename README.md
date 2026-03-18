@@ -1,21 +1,62 @@
-# CSC-289
+# Phase 1: Flask Login Exercise
 
-# Capstone
-# Hi! My name's Toni Wilson
+A starter repo for the Solo Burger exercise — your first user story through the Sacred Workflow.
 
-## About Me
-Currently, I'm taking CSC-113 AI Fundamentals and learning to collaborate with AI tools!
+## What This Is
 
-## My Foo
-I'm a reader, writer, and an avid anime watcher at most times, but whenever I gather up the courage to leave my home, I love walking and sightseeing. Aquariums, planteriums, museums, national parks, and amusement parks, are some of my favourite places to be. On top of that, I am a collector of physical media. Not yet at the level where I want to be, in the next few years, my home would resemble that of a museum of pop culture and social history.
+A minimal Flask application that returns "Hello World." Your job is to implement a login page with session-based authentication, following the instructions in `instructions/solo-burger-instructions.md`.
 
-## Currently Learning
-- 🤖 AI collaboration and prompt engineering
-- 🐙 GitHub workflows and version control
-- 💡 Building my first AI assistants
+## Getting Started
 
-- ## Fun Fact
-Very random is that I was born and raised in Jamaica. It's for a lot of people to believe apparently.
+```bash
+# Clone your copy of the repo
+git clone <your-repo-url>
+cd phase1-flask-login
 
-## Find Me
-- 📫 Right here on GitHub!
+# Create a virtual environment
+python -m venv venv
+source venv/bin/activate        # macOS/Linux
+# venv\Scripts\activate         # Windows
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the app
+python app.py
+```
+
+Visit `http://localhost:5000` in your browser. You should see "Hello, World! Your Flask app is running."
+
+If you see that message, you're ready to start. If not, check the Troubleshooting section in the instructions.
+
+## Project Structure
+
+```
+├── app.py                    # Flask app (all routes live here)
+├── templates/
+│   └── base.html             # Base template with HTML boilerplate
+├── static/
+│   └── style.css             # Your styles (empty to start)
+├── requirements.txt          # Flask dependency
+├── CLAUDE.md                 # Project context for Claude Code
+├── instructions/
+│   └── solo-burger-instructions.md  # Full assignment instructions
+├── .github/
+│   └── pull_request_template.md     # PR template
+└── README.md                 # This file
+```
+
+## Your Task
+
+**Issue #1: Basic Login Page**
+
+Implement a login page with these acceptance criteria:
+
+1. `/login` route renders a form with username and password fields
+2. Valid credentials redirect to `/dashboard`
+3. Invalid credentials show an error message on the login page
+4. `/dashboard` displays "Welcome, [username]"
+5. `/dashboard` redirects to `/login` if not authenticated
+6. Logout clears session and returns to `/login`
+
+Read `instructions/solo-burger-instructions.md` for the full walkthrough.
